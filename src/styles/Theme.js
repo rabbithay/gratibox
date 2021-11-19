@@ -18,8 +18,6 @@ const Theme = createGlobalStyle`
         --green3:
         --green4:
 
-
-
         --primary: #9c6cea ; //button purple
         --secondary: #5d43a7 ; //dark purple
         --tertiary: #ece2f4 ; //light purple
@@ -124,6 +122,21 @@ const Theme = createGlobalStyle`
         &:active {
             background-color: var(--purple56);
             transform: translateY(4px);
+        }
+    }
+
+    select {
+        height: 44px;
+        background: rgba(224, 209, 237, 0.62);
+        border-radius: 5px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        color: #4D65A8; 
+        option {
+            background: rgba(224, 209, 237, 0.62);
+
         }
     }
 
