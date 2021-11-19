@@ -13,7 +13,7 @@ export const PageBody = styled.div`
 `;
 
 export const SecondBg = styled.div`
-    background-color: var(--secondary);
+    background-color: var(--purple1);
     width: 100vw;
     height: 50vh;
     position: fixed;

@@ -1,7 +1,6 @@
 import React from 'react';
 import * as S from './style';
-import bg from '../../assets/images/homepage.png'
-import Button from '../../components/button'
+import bg from '../../assets/images/homepage.jpg'
 import { Link } from 'react-router-dom';
 
 export default function HomePage() {
@@ -14,7 +13,7 @@ export default function HomePage() {
         </S.TopContent>
 
         <S.BottomContent>
-          <Button text='Quero começar' />
+          <button type="submit">Quero começar</button>
           <Link to='/login'>Já sou grate</Link>
         </S.BottomContent>
       </S.PageBody>

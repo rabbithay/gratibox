@@ -14,7 +14,7 @@ export default function Login() {
         </form>
       </S.TopContent>
       <S.BottomContent>
-        <Button text='Login'/>
+        <button type='submit'>Login</button>
         <Link to='/register'>Ainda não sou grate</Link>
       </S.BottomContent>
     </S.PageBody>

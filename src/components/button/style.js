@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Button = styled.button`
     width: 202px;
     height: 45px;
-    background-color: var(--primary);
+    background-color: var(--purple5);
     color: var(--text);
     border-radius: 10px;
     display: flex;
@@ -13,11 +13,10 @@ export const Button = styled.button`
     cursor: pointer;
 
     &:hover {
-        background-color: var(--background);
+        background-color: var(--purple6);
     }
     &:active {
-        background-color: var(--background);
-        /* box-shadow: 0 5px #666; */
+        background-color: var(--purple6);
         transform: translateY(4px);
     }
 `;

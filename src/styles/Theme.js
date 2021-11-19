@@ -2,6 +2,24 @@ import { createGlobalStyle } from 'styled-components';
 
 const Theme = createGlobalStyle`
     :root {
+        //from darker to lighter
+        --purple1: #4d65a8; //bg2
+        --purple2: #566bb8;
+        --purple3: #6072cb;
+        --purple4: #6d7ce4; //background
+        --purple5: #8c97ea;
+        --purple56: #9DA0EB;
+        --purple6: #ece2f4;
+
+        --cream1: #e5cdb3;
+
+        --green1:
+        --green2:
+        --green3:
+        --green4:
+
+
+
         --primary: #9c6cea ; //button purple
         --secondary: #5d43a7 ; //dark purple
         --tertiary: #ece2f4 ; //light purple
@@ -16,7 +34,7 @@ const Theme = createGlobalStyle`
     }
 
     html {
-        background: var(--background);
+        background: var(--purple4);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -42,9 +60,16 @@ const Theme = createGlobalStyle`
     h3 {
         font-style: normal;
         font-weight: bold;
+        font-size: 22px;
+        line-height: 26px;
+        color: var(--purple2);
+    }
+    h4 {
+        font-style: normal;
+        font-weight: bold;
         font-size: 18px;
         line-height: 21px;
-        color: var(--secondary);
+        color: var(--purple1);
     }
 
     p {
@@ -63,7 +88,7 @@ const Theme = createGlobalStyle`
         text-align: center;
         color: var(--text);
         &:hover {
-            color: var(--primary);
+            color: var(--purple6);
             cursor: pointer;
         }
     }
@@ -79,6 +104,27 @@ const Theme = createGlobalStyle`
         width: 100%;
         margin: 4px;
         color: var(--darkText);
+    }
+
+    button {
+        width: 202px;
+        height: 45px;
+        background-color: var(--purple5);
+        color: var(--text);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--purple56);
+        }
+        &:active {
+            background-color: var(--purple56);
+            transform: translateY(4px);
+        }
     }
 
 `;

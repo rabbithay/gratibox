@@ -6,6 +6,7 @@ import HomePage from './pages/homepage';
 import Login from './pages/login';
 import Register from './pages/register';
 import Plans from './pages/plans';
+import PlanDetail from './pages/planDetail';
 
 export default function Routes() {
   return (
@@ -14,6 +15,7 @@ export default function Routes() {
       <Route exact path="/login" element={<Login />} />
       <Route exact path="/register" element={<Register />} />
       <Route exact path="/plans" element={<Plans />} />
+      <Route exact path="/plan-detail" element={<PlanDetail />} />
     </Switch>    
   );
 }

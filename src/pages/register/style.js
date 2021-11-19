@@ -17,7 +17,7 @@ export const TopContent = styled.div`
 `;
 
 export const BottomContent = styled.div`
-   display: inline-flex;
+    display: inline-flex;
    flex-direction: column;
    align-items: center;
    gap: 0.8rem;
@@ -25,17 +25,5 @@ export const BottomContent = styled.div`
        width: 240px;
        height: 56px;
        font-size: 36px;
-       background-color: var(--primary);
-       &:hover{
-           background-color: var(--primary);
-       }
-       &:active{
-           background-color: var(--primary);
-       }
-   }
-   a {
-       &:hover{
-            color: var(--tertiary);
-        }
    }
 `;

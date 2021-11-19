@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '../../components/button';
 import * as S from './style';
 
 export default function Register() {
@@ -15,7 +14,7 @@ export default function Register() {
         </form>
       </S.TopContent>
       <S.BottomContent>
-        <Button text='Cadastrar'/>
+        <button type='submit'>Cadastrar</button>
       </S.BottomContent>
     </S.PageBody>
   );
