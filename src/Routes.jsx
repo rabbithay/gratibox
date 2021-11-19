@@ -9,9 +9,9 @@ import Register from './pages/register';
 export default function Routes() {
   return (
     <Switch>
-      <Route exact path="/login" component={Login} />
-      <Route exact path="/register" component={Register} />
-      <Route exact path="/" component={HomePage} />
+      <Route exact path="/" element={<HomePage />} />
+      <Route exact path="/login" element={<Login />} />
+      <Route exact path="/register" element={<Register />} />
     </Switch>
   );
 }

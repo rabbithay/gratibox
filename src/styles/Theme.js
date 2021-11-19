@@ -2,11 +2,11 @@ import { createGlobalStyle } from 'styled-components';
 
 const Theme = createGlobalStyle`
     :root {
-        --primary: #8C97EA ; //button purple
-        --secondary: #4D65A8 ; //dark purple
+        --primary: #6d7ce4 ; //button purple
+        --secondary: #5d43a7 ; //dark purple
         --tertiary: #E0D1ED ; //light purple
         --detail: #E63C80 ; //pink 
-        --background: #6d7ce4 ;
+        --background: #852fe4 ;
         --text: #ffffff ;
     }
     body {
@@ -64,7 +64,6 @@ const Theme = createGlobalStyle`
             color: var(--primary)
         }
     }
-
 
 `;
 
