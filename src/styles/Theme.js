@@ -2,13 +2,15 @@ import { createGlobalStyle } from 'styled-components';
 
 const Theme = createGlobalStyle`
     :root {
-        --primary: #6d7ce4 ; //button purple
+        --primary: #9c6cea ; //button purple
         --secondary: #5d43a7 ; //dark purple
-        --tertiary: #E0D1ED ; //light purple
+        --tertiary: #ece2f4 ; //light purple
         --detail: #E63C80 ; //pink 
         --background: #852fe4 ;
         --text: #ffffff ;
+        --darkText: #604848 ; 
     }
+
     body {
         font-family: 'Roboto';
     }
@@ -52,7 +54,7 @@ const Theme = createGlobalStyle`
         line-height: 21px;
         color: var(--text);
     }
-
+ 
     a {
         font-style: normal;
         font-weight: bold;
@@ -61,8 +63,22 @@ const Theme = createGlobalStyle`
         text-align: center;
         color: var(--text);
         &:hover {
-            color: var(--primary)
+            color: var(--primary);
+            cursor: pointer;
         }
+    }
+
+    input {
+        height: 64px;
+        background: #FFFFFF;
+        border: 1px solid #604848;
+        border-radius: 10px;
+        padding: 17px;
+        font-weight: 500;
+        font-size: 24px;
+        width: 100%;
+        margin: 4px;
+        color: var(--darkText);
     }
 
 `;

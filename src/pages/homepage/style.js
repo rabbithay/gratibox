@@ -38,4 +38,8 @@ export const BottomContent = styled.div`
    flex-direction: column;
    align-items: center;
    gap: 0.8rem;
+   button {
+    font-size: 18px;
+   }
+
 `;

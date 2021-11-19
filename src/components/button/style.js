@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Button = styled.div`
+export const Button = styled.button`
     width: 202px;
     height: 45px;
     background-color: var(--primary);
@@ -9,11 +9,14 @@ export const Button = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 700;
+    cursor: pointer;
+
     &:hover {
-        background-color: var(--secondary);
+        background-color: var(--background);
     }
     &:active {
-        background-color: var(--secondary);
+        background-color: var(--background);
         /* box-shadow: 0 5px #666; */
         transform: translateY(4px);
     }
