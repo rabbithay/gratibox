@@ -1,136 +1,85 @@
-# GratiBox
+<p align="center">
+  <img src="src/assets/images/homepage.jpg" width="175" alt="gratibox" />
+</p>
 
-## Documentation
-
-<br/>
-
-### `POST /register`
-
-#### Request
-
-    body: {
-        "name": "Marina",
-        "email": "marinasena@gmail.com",
-        "password": "De1primeira!"
-    }
-
-#### Response
-
-    in case of invalid params: status 406
-
-    in case of repeated e-mail: status 409
-
-    in case of success: status 201
+# Gratibox
 
 <br>
 
-### `POST /login`
+## About 🧘‍♀️
 
-#### Request
+<p>
+    An app to recurrently receive products that inspire gratitude. Ideal to accompany your in your moments of meditation and contemplation of nature. Namastê
+</p>
+<br>
 
-    body: {
-        email: marinasena@gmail.com,
-        password: De1primeira!
-    }
+### Deploy 🙏
 
-#### Response
+<p align="center">
+<a style='margin-left: 10px;' href='https://gratibox-rouge.vercel.app/' target="_blank">
+  <img src='https://img.shields.io/badge/vercel%20-%23000000.svg?&style=for-the-badge&logo=vercel&logoColor=white'>
+</a>
+</p>
+<br>
 
-    in case of invalid params: status 406
+### API repository 🧞
 
-    in case of incorrect e-mail and/or password: 401
-
-    in case of success: status 200
-
-    if user has a plan:
-        data: {
-            "user_id": 1,
-            "name": "Marina",
-            "email": "marinasena@gmail.com",
-            "token": "ad52a74s3f54a32d",
-            "plan_status": true,
-            "PLAN": {
-                "plan_type": "weekly",
-                "created_date": ,
-                "next_deliveries": [
-                    delivery_date,
-                    delivery_date,
-                    delivery_date,
-                    delivery_date
-                ],
-                "products": [
-                    "incensos", 
-                    "produtos organicos",
-                    "chás"
-                ]
-            }
-        }
-
-    if user does not has' a plan:
-        data: {
-            "user_id": 1,
-            "name": "Marina",
-            "email": "marinasena@gmail.com",
-            "token": "ad52a74s3f54a32d",
-            "plan_status": false,        
-        }
+<p align="center">
+<a style='margin-left: 10px;' href='https://github.com/rabbithay/gratibox-api' target="_blank">
+<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /></a>
+</p>
 
 <br>
 
-### `POST /plan`
+### Implemented features ✨
 
-#### Request
-
-    header bearer token
-
-    body: {
-        "user_id": 1,
-        "plan_type": "weekly",
-        "delivery_day": 1,
-        "products": [1, 2, 3],
-        "full_user_name": "Marina Sena",
-        "address": "",
-        "cep": "",
-        "city": "",
-        "state": ""
-    }
-
-#### Response
-
-    in case of invalid token: status 401
-
-    in case of invalid params: status 406 > trocar pra 400
-
-    in case of success: status 201
+- [x] register and login
+- [x] choose a plan that better suits for you
+- [x] select your plan details such as delivery date and what kind of products you'd like to receive
 
 <br>
 
-### `GET /products`
+### To be implemented 🔮
 
-#### Request
+- [ ] view your plan details
+- [ ] view upcoming delivery dates
+- [ ] feedback received deliveries
 
-    header bearer token    
+<br>
 
-#### Response
+### Running the web application 🦋
 
-    in case of invalid token: status 401
+```bash
+# Clone this repository
+$ git clone <https://github.com/rabbithay/gratibox>
 
-    in case of success: status 200
+# Access the project folder cmd/terminal
+$ cd gratibox
 
-    data: {
-        products: [
-            {
-                "product_id": 1,
-                "product_name": "incensos"                
-            },
-            {
-                "product_id": 2,
-                "product_name": "produtos orgânicos"                
-            },
-            {
-                "product_id": 3,
-                "product_name": "chás"                
-            }
-        ]
-    }
+# Install the dependencies
+$ yarn
+
+# Run the application in development mode
+$ yarn start
+
+# The server will automatically start at localhost:3000/
+```
+
+<br>
+
+### Tech Stack
+
+<br>
+
+<p align="center">
+<img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/>
+<img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/>
+<img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
+<img alt='express' src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" />
+<img alt='react' src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+<img alt='styled-components' src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" />
+<img alt="eslint" src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white" />
+
+</p>
 
 <br>
