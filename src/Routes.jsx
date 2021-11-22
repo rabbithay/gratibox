@@ -18,6 +18,6 @@ export default function Routes() {
       <Route exact path="/plans" element={<Plans />} />
       <Route exact path="/plan-detail" element={<PlanDetail />} />
       <Route exact path="/sign-plan" element={<SignPlan />} />
-    </Switch>    
+    </Switch>
   );
 }

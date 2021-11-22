@@ -41,5 +41,4 @@ export const BottomContent = styled.div`
    button {
     font-size: 18px;
    }
-
 `;

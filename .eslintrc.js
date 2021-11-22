@@ -18,6 +18,7 @@ module.exports = {
     'react',
   ],
   rules: {
-    'react/function-component-definition': false,
+    'react/function-component-definition': 0,
+    'react/jsx-no-constructed-context-values': 0,
   },
 };

@@ -6,8 +6,8 @@ import GlobalStyle from './styles/GlobalStyle';
 import Theme from './styles/Theme';
 import Routes from './Routes';
 
-export default function App() {
-  const [user, setUser] = useLocalStorage('@user', {});
+function App() {
+  const [user, setUser] = useLocalStorage('@user-gratibox', {});
 
   return (
     <UserContext.Provider value={{ user, setUser }}>
@@ -19,3 +19,4 @@ export default function App() {
     </UserContext.Provider>
   );
 }
+export default App;
