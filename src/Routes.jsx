@@ -9,7 +9,7 @@ import Plans from './pages/plans';
 import PlanDetail from './pages/planDetail';
 import SignPlan from './pages/signPlan';
 
-const Routes = function () {
+export default function Routes() {
   return (
     <Switch>
       <Route exact path="/" element={<HomePage />} />
@@ -20,5 +20,4 @@ const Routes = function () {
       <Route exact path="/sign-plan" element={<SignPlan />} />
     </Switch>
   );
-};
-export default Routes;
+}

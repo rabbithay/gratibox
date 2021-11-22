@@ -1,19 +1,24 @@
-/* eslint-disable react/function-component-definition */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Loader from 'react-loader-spinner';
 import { login } from '../../services/user.api';
 import * as S from './style';
+import UserContext from '../../contexts/userContext';
 
 export default function Login() {
+  const { user, setUser } = useContext(UserContext);
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
   const [emailIsValid, setEmailIsValid] = useState(false);
-
   const [isLoading, setIsLoading] = useState(false);
 
   const navigate = useNavigate();
+
+  function decideRedirect(planStatus) {
+    if (planStatus) navigate('/plan-detail');
+    else navigate('/plans');
+  }
 
   useEffect(() => {
     setEmailIsValid(
@@ -21,7 +26,10 @@ export default function Login() {
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
       ),
     );
-  }, [email]);
+    if (user && user.token) {
+      decideRedirect(user.plan_status);
+    }
+  }, [email, user]);
 
   function submitLogin(e) {
     e.preventDefault();
@@ -32,8 +40,7 @@ export default function Login() {
         email, password,
       };
       login(body).then((res) => {
-        if (res.data.plan_status) navigate('/plan-detail');
-        else navigate('/plans');
+        setUser(res.data);
       }).catch((error) => {
         console.log(error);
       }).finally(() => {

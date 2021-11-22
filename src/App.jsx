@@ -7,7 +7,7 @@ import Theme from './styles/Theme';
 import Routes from './Routes';
 
 function App() {
-  const [user, setUser] = useLocalStorage('@user', {});
+  const [user, setUser] = useLocalStorage('@user-gratibox', {});
 
   return (
     <UserContext.Provider value={{ user, setUser }}>
