@@ -7,6 +7,6 @@ const BASE_URL = process.env.NODE_ENV === 'development'
 export function getProductsList(config) {
   return axios.get(`${BASE_URL}/products`, config);
 }
-export function login(body) {
-  return axios.post(`${BASE_URL}/login`, body);
+export function signPlan(body, config) {
+  return axios.post(`${BASE_URL}/plan`, body, config);
 }
