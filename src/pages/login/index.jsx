@@ -32,8 +32,8 @@ export default function Login() {
         email, password,
       };
       login(body).then((res) => {
-        console.log(res);
-        navigate('/');
+        if (res.data.plan_status) navigate('/plan-detail');
+        else navigate('/plans');
       }).catch((error) => {
         console.log(error);
       }).finally(() => {
