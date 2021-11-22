@@ -65,5 +65,4 @@ export const Products = styled.div`
         line-height: 21px;
         font-weight: 400;
     };
-
 `;

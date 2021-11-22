@@ -165,5 +165,4 @@ export const StateDropdown = styled.div`
     color: #4D65A8;
     width: 110px;
     border-radius: 10px;
-
 `;

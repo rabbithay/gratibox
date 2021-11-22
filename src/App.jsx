@@ -6,7 +6,7 @@ import GlobalStyle from './styles/GlobalStyle';
 import Theme from './styles/Theme';
 import Routes from './Routes';
 
-export default function App() {
+function App() {
   const [user, setUser] = useLocalStorage('@user', {});
 
   return (
@@ -19,3 +19,4 @@ export default function App() {
     </UserContext.Provider>
   );
 }
+export default App;

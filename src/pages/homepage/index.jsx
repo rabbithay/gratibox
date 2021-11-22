@@ -1,9 +1,9 @@
 import React from 'react';
-import * as S from './style';
-import bg from '../../assets/images/homepage.jpg'
 import { Link } from 'react-router-dom';
+import * as S from './style';
+import bg from '../../assets/images/homepage.jpg';
 
-export default function HomePage() {
+const HomePage = function () {
   return (
     <>
       <S.PageBody>
@@ -13,14 +13,15 @@ export default function HomePage() {
         </S.TopContent>
 
         <S.BottomContent>
-          <button type="submit">Quero começar</button>
-          <Link to='/login'>Já sou grate</Link>
+          <Link to="/register"><button type="submit">Quero começar</button></Link>
+          <Link to="/login">Já sou grate</Link>
         </S.BottomContent>
       </S.PageBody>
 
       <S.SecondBg>
-        <S.BackgroundImage src={bg}/>
+        <S.BackgroundImage src={bg} />
       </S.SecondBg>
     </>
   );
-}
+};
+export default HomePage;

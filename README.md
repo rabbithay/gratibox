@@ -1,70 +1,136 @@
-# Getting Started with Create React App
+# GratiBox
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Documentation
 
-## Available Scripts
+<br/>
 
-In the project directory, you can run:
+### `POST /register`
 
-### `yarn start`
+#### Request
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    body: {
+        "name": "Marina",
+        "email": "marinasena@gmail.com",
+        "password": "De1primeira!"
+    }
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Response
 
-### `yarn test`
+    in case of invalid params: status 406
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    in case of repeated e-mail: status 409
 
-### `yarn build`
+    in case of success: status 201
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `POST /login`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Request
 
-### `yarn eject`
+    body: {
+        email: marinasena@gmail.com,
+        password: De1primeira!
+    }
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Response
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    in case of invalid params: status 406
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    in case of incorrect e-mail and/or password: 401
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    in case of success: status 200
 
-## Learn More
+    if user has a plan:
+        data: {
+            "user_id": 1,
+            "name": "Marina",
+            "email": "marinasena@gmail.com",
+            "token": "ad52a74s3f54a32d",
+            "plan_status": true,
+            "PLAN": {
+                "plan_type": "weekly",
+                "created_date": ,
+                "next_deliveries": [
+                    delivery_date,
+                    delivery_date,
+                    delivery_date,
+                    delivery_date
+                ],
+                "products": [
+                    "incensos", 
+                    "produtos organicos",
+                    "chás"
+                ]
+            }
+        }
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    if user does not has' a plan:
+        data: {
+            "user_id": 1,
+            "name": "Marina",
+            "email": "marinasena@gmail.com",
+            "token": "ad52a74s3f54a32d",
+            "plan_status": false,        
+        }
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br>
 
-### Code Splitting
+### `POST /plan`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Request
 
-### Analyzing the Bundle Size
+    header bearer token
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    body: {
+        "user_id": 1,
+        "plan_type": "weekly",
+        "delivery_day": 1,
+        "products": [1, 2, 3],
+        "full_user_name": "Marina Sena",
+        "address": "",
+        "cep": "",
+        "city": "",
+        "state": ""
+    }
 
-### Making a Progressive Web App
+#### Response
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    in case of invalid token: status 401
 
-### Advanced Configuration
+    in case of invalid params: status 406 > trocar pra 400
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    in case of success: status 201
 
-### Deployment
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### `GET /products`
 
-### `yarn build` fails to minify
+#### Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    header bearer token    
+
+#### Response
+
+    in case of invalid token: status 401
+
+    in case of success: status 200
+
+    data: {
+        products: [
+            {
+                "product_id": 1,
+                "product_name": "incensos"                
+            },
+            {
+                "product_id": 2,
+                "product_name": "produtos orgânicos"                
+            },
+            {
+                "product_id": 3,
+                "product_name": "chás"                
+            }
+        ]
+    }
+
+<br>
