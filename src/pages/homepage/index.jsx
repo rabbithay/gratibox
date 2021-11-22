@@ -18,9 +18,9 @@ const HomePage = function () {
         </S.BottomContent>
       </S.PageBody>
 
-      <S.SecondBg>
-        <S.BackgroundImage src={bg} />
-      </S.SecondBg>
+      <S.BackgroundImage src={bg} />
+
+      <S.SecondBg />
     </>
   );
 };
