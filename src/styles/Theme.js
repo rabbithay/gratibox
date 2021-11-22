@@ -10,6 +10,7 @@ const Theme = createGlobalStyle`
         --purple5: #8c97ea;
         --purple56: #9DA0EB;
         --purple6: #ece2f4;
+        --purple7: #e0d1ed;
 
         --cream1: #e5cdb3;
 

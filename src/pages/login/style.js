@@ -2,11 +2,13 @@ import styled from 'styled-components';
 
 export const PageBody = styled.div`   
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     padding: 100px 25px;
+    height: auto;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
+   max-width: 550px;
 `;
 
 export const TopContent = styled.div`  

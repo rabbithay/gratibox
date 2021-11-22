@@ -10,6 +10,10 @@ export const PageBody = styled.div`
     justify-content: flex-start;
     align-items: center;
     gap: 40px;
+    button {
+        font-size: 24px;
+        margin-top: -25px;
+    }
 `;
 
 export const TopContent = styled.div`  
@@ -55,7 +59,7 @@ export const Form = styled.div`
     display: inline-flex;
     flex-direction: column;
     gap: 7px;
-    border-radius: 5px;
+    border-radius: 10px;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -72,13 +76,14 @@ export const Form = styled.div`
         font-size: 18px;
         line-height: 21px;
         color: #4D65A8;
+        border: none;
     }
 `;
 
 export const Dropdown = styled.div`
     height: 44px;
     background: rgb(224, 209, 237);
-    border-radius: 5px;
+    border-radius: 10px;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -96,7 +101,7 @@ export const DropdownButton = styled.div`
 export const DropdownContent = styled.div`
     height: auto;
     background: rgb(224, 209, 237);
-    border-radius: 5px;
+    border-radius: 10px;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -105,29 +110,34 @@ export const DropdownContent = styled.div`
     width: 100%;
 
 `;
+
 export const DropwdownFront = styled.div`
     height: 44px;
     background: rgb(224, 209, 237);    
     padding: 9px 12px;
     display: flex;
     align-items: center;
+    border-radius: 10px;
 `;
 
 export const DropwdownOption = styled.div`
     height: 44px;
-    background: rgb(224, 209, 237);
+    background: var(--purple6);
     padding: 9px 12px;
     display: flex;
     align-items: center;
     z-index: 900;
     position: sticky;
+    &:hover{
+        background: var(--purple7);
+    }
 `;
 
 export const SelectBox = styled.div`
     width: 100%;
     height: auto;
     background: rgb(224, 209, 237);
-    border-radius: 5px; 
+    border-radius: 10px; 
     padding: 15px 12px;
 `;
 
