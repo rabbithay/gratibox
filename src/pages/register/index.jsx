@@ -33,10 +33,11 @@ export default function Register() {
     setPasswordsMatch(!!(password === repeatPassword));
   }, [email, password, repeatPassword]);
 
-  function confirmRegister(e) {
+  function submitLogin(e) {
     e.preventDefault();
-    setIsLoading(true);
     if (!!name && emailIsValid && passwordIsValid && passwordsMatch) {
+      setIsLoading(true);
+
       const body = {
         name, email, password,
       };
@@ -63,7 +64,7 @@ export default function Register() {
         </form>
       </S.TopContent>
       <S.BottomContent>
-        <button type="submit" onClick={confirmRegister}>
+        <button type="submit" onClick={submitLogin}>
           {(isLoading)
             ? <Loader type="ThreeDots" color="#ffffff" height={80} width={80} />
             : 'Cadastrar'}
