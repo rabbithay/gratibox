@@ -9,7 +9,7 @@
 ## About 🧘‍♀️
 
 <p>
-    An app to recurrently receive products that inspire gratitude. Ideal to accompany your in your moments of meditation and contemplation of nature. Namastê
+    An app to recurrently receive products that inspire gratitude. Ideal to accompany in your moments of meditation and contemplation of nature. Namastê
 </p>
 <br>
 
