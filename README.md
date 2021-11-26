@@ -9,7 +9,21 @@
 ## About 🧘‍♀️
 
 <p>
-    An app to recurrently receive products that inspire gratitude. Ideal to accompany in your moments of meditation and contemplation of nature. Namastê
+An app of a delivery signature to receive zen products periodically.
+
+You can start exercising gratitude right now, just register yourself and login into our peaceful space.
+
+Once you enter the application, you’ll be presented with the possible plans you can sign in and choose the one that suits you better.
+
+In the next page, we’ll want to know the details that you prefer to your orders, to create a best personalized box experience.
+
+At last, let us know you better, giving your address and personal information.
+
+Once everything is done with your signature plan, you can always keep in track of your future box deliveries dates accessing “my plan”.
+
+Your feedback matters!! Let us know what are you feeling about the experience and products that you are having? We are always looking to improve ourselves for you.
+
+Namastê
 </p>
 <br>
 
@@ -33,17 +47,19 @@
 
 ### Implemented features ✨
 
-- [x] register and login
-- [x] choose a plan that better suits for you
-- [x] select your plan details such as delivery date and what kind of products you'd like to receive
+- [x] sign up and sign in
+- [x] choose and sign a plan
+- [x] choose the details of your plan
+- [x] add your delivery info
+- [x] enjoy positive messages while navigate into the app
 
 <br>
 
 ### To be implemented 🔮
 
-- [ ] view your plan details
-- [ ] view upcoming delivery dates
-- [ ] feedback received deliveries
+- [ ] easily see your plan details...
+- [ ] ...and future deliveries
+- [ ] give us feedback!
 
 <br>
 
