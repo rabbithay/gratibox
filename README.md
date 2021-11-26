@@ -1,10 +1,11 @@
+# Gratibox
+
 <p align="center">
+  <br>
+
   <img src="src/assets/images/homepage.jpg" width="175" alt="gratibox" />
 </p>
 
-# Gratibox
-
-<br>
 
 ## About 🧘‍♀️
 
