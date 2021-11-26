@@ -13,7 +13,7 @@ An app of a delivery signature to receive zen products periodically.
 
 You can start exercising gratitude right now, just register yourself and login into our peaceful space.
 
-Once you enter the application, you’ll be presented with the possible plans you can sign in and choose the one that suits you better.
+Once you enter the application, you’ll be presented to the possible plans you can sign in and choose the one that suits you better.
 
 In the next page, we’ll want to know the details that you prefer to your orders, to create a best personalized box experience.
 
@@ -21,7 +21,7 @@ At last, let us know you better, giving your address and personal information.
 
 Once everything is done with your signature plan, you can always keep in track of your future box deliveries dates accessing “my plan”.
 
-Your feedback matters!! Let us know what are you feeling about the experience and products that you are having? We are always looking to improve ourselves for you.
+Your feedback matters!! Let us know what you are feeling about the experience and products that you are having. We are always looking to improving ourselves for you.
 
 Namastê
 </p>
